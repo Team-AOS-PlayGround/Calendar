@@ -3,4 +3,7 @@ plugins {
     `kotlin-dsl-precompiled-script-plugins`
 }
 
-depen
+dependencies {
+    implementation(libs.android.gradlePlugin)
+    implementation(libs.kotlin.gradlePlugin)
+}

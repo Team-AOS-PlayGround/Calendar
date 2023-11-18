@@ -24,7 +24,7 @@ composeShimmer = "1.0.5"
 
 junit4 = "4.13.2"
 junitVintageEngine = "5.10.0"
-kotlin = "1.8.21"
+kotlin = "1.8.10"
 
 androidxTestExt = "1.1.4"
 androidxEspresso = "3.5.0"
@@ -43,6 +43,8 @@ ossLicensesPlugin = "0.10.6"
 
 androidxGlance = "1.0.0-beta01"
 glanceExperimentalTools = "0.2.2"
+junit = "1.1.5"
+material = "1.10.0"
 
 [libraries]
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
@@ -116,6 +118,8 @@ oss-licenses-plugin = { group = "com.google.android.gms", name = "oss-licenses-p
 androidx-glance = { group = "androidx.glance", name = "glance", version.ref = "androidxGlance" }
 androidx-glance-appwidget = { group = "androidx.glance", name = "glance-appwidget", version.ref = "androidxGlance" }
 glance-tools-appwidget-host = { group = "com.google.android.glance.tools", name = "appwidget-host", version.ref = "glanceExperimentalTools"}
+junit = { group = "androidx.test.ext", name = "junit", version.ref = "junit" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [bundles]
 
