@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -14,5 +15,11 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Calendar"
-include(":app")
- 
+include(
+    ":app",
+
+    ":data",
+    ":domain",
+    ":presentation"
+)
+
