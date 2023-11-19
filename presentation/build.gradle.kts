@@ -26,4 +26,6 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test)
     androidTestImplementation(libs.androidx.compose.ui.tooling)
     androidTestImplementation(libs.androidx.compose.ui.testManifest)
+
+    implementation(libs.calendar.compose)
 }

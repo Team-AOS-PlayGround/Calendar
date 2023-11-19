@@ -47,6 +47,8 @@ glanceExperimentalTools = "0.2.2"
 junit = "1.1.5"
 material = "1.10.0"
 
+calendarCompose = "2.0.0"
+
 [libraries]
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
 android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
@@ -123,6 +125,9 @@ androidx-glance-appwidget = { group = "androidx.glance", name = "glance-appwidge
 glance-tools-appwidget-host = { group = "com.google.android.glance.tools", name = "appwidget-host", version.ref = "glanceExperimentalTools"}
 junit = { group = "androidx.test.ext", name = "junit", version.ref = "junit" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+# calendar
+calendar-compose = { group = "com.kizitonwose.calendar", name = "compose", version.ref = "calendarCompose" }
 
 [bundles]
 
