@@ -1,4 +1,4 @@
-package com.bluesky.calendar.ui.theme
+package com.bluesky.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

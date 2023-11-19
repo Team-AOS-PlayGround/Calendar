@@ -1,4 +1,4 @@
-package com.bluesky.calendar
+package com.bluesky.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.bluesky.calendar.ui.theme.CalendarTheme
+import com.bluesky.presentation.theme.CalendarTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
