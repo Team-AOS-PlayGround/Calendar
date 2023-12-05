@@ -7,4 +7,6 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.datastore)
+    implementation(project(mapOf("path" to ":domain")))
 }

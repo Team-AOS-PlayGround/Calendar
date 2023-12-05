@@ -18,6 +18,7 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.lifecycle.runtimeCompose)
     implementation(libs.androidx.lifecycle.viewModelCompose)
+    implementation(project(mapOf("path" to ":domain")))
 
     testImplementation(libs.junit4)
     androidTestImplementation(libs.junit)
