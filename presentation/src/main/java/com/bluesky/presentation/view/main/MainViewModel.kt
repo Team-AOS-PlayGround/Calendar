@@ -1,4 +1,4 @@
-package com.bluesky.presentation
+package com.bluesky.presentation.view.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
