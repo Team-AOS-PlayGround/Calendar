@@ -2,6 +2,7 @@ package com.bluesky.presentation.view.tab.hitmapcalendar
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -12,7 +13,7 @@ import com.bluesky.presentation.view.tab.setting.SettingScreen
 @Composable
 internal fun HitMapCalendarScreen() {
     Column(
-        Modifier.background(Color.White)
+        Modifier.fillMaxSize().background(Color.Blue)
     ) {
 
     }

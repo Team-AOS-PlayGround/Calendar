@@ -13,74 +13,86 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.NavHost
+import com.bluesky.presentation.R
+import com.bluesky.presentation.theme.surfaceDim
+import com.bluesky.presentation.view.tab.hitmapcalendar.hitMapCalendarNavGraph
+import com.bluesky.presentation.view.tab.setting.settingNavGraph
+import com.bluesky.presentation.view.tab.standardcalendar.standardCalendarNavGraph
+import kotlinx.coroutines.launch
+import java.net.UnknownHostException
 
 @Composable
 internal fun CalendarApp(
-//    navigator: MainNavigator = rememberMainNavigator(),
+    navigator: MainNavigator = rememberMainNavigator(),
 //    onChangeDarkTheme: (Boolean) -> Unit
 ) {
 
-    val appState = rememberCalendarAppState()
     val snackBarHostState = remember { SnackbarHostState() }
-    /*
-        val coroutineScope = rememberCoroutineScope()
-        val localContextResource = LocalContext.current.resources
-        val onShowErrorSnackBar: (throwable: Throwable?) -> Unit = { throwable ->
-            coroutineScope.launch {
-                snackBarHostState.c(
-                    when (throwable) {
-                        is UnknownHostException -> localContextResource.getString(R.string.error_message_network)
-                        else -> localContextResource.getString(R.string.error_message_unknown)
-                    }
-                )
-            }
-        }
-
-        Scaffold(
-            content = { padding ->
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(MaterialTheme.colorScheme.surfaceDim)
-                ) {
-                    NavHost(
-                        navController = navigator.navController,
-                        startDestination = navigator.startDestination,
-                    ) {
-                        standardCalendarNavGraph(padding)
-                        hitMapCalendarNavGraph(padding)
-                        settingNavGraph(padding)
-                    }
+    val coroutineScope = rememberCoroutineScope()
+    val localContextResource = LocalContext.current.resources
+    val onShowErrorSnackBar: (throwable: Throwable?) -> Unit = { throwable ->
+        coroutineScope.launch {
+            snackBarHostState.showSnackbar(
+                when (throwable) {
+                    is UnknownHostException -> localContextResource.getString(R.string.error_message_network)
+                    else -> localContextResource.getString(R.string.error_message_unknown)
                 }
-            },
-            bottomBar = {
-                MainBottomBar(
-                    visible = navigator.shouldShowBottomBar(),
-                    tabs = MainTab.values().toList(),
-                    currentTab = navigator.currentTab,
-                    onTabSelected = { navigator.navigate(it) }
-                )
-            },
-            snackbarHost = { SnackbarHost(snackBarHostState) }
-        )*/
+            )
+        }
+    }
+
+    Scaffold(
+        content = { padding ->
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(MaterialTheme.colorScheme.surfaceDim)
+            ) {
+                NavHost(
+                    navController = navigator.navController,
+                    startDestination = navigator.startDestination,
+                ) {
+                    standardCalendarNavGraph(padding)
+                    hitMapCalendarNavGraph(padding)
+                    settingNavGraph(padding)
+                }
+            }
+        },
+        bottomBar = {
+            MainBottomBar(
+                visible = navigator.shouldShowBottomBar(),
+                tabs = MainTab.values().toList(),
+                currentTab = navigator.currentTab,
+                onTabSelected = { navigator.navigate(it) }
+            )
+        },
+        snackbarHost = { SnackbarHost(snackBarHostState) }
+    )
 }
 
 @Composable

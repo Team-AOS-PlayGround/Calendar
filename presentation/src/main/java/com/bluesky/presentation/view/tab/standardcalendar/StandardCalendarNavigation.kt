@@ -19,5 +19,5 @@ fun NavGraphBuilder.standardCalendarNavGraph(
 }
 
 object StandardCalendarRoute {
-    const val route = "hitMapCalendar"
+    const val route = "standardCalendar"
 }

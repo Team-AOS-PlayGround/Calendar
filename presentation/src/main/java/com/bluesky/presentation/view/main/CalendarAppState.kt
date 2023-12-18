@@ -12,7 +12,9 @@ import androidx.compose.material3.SnackbarHostState
 import kotlinx.coroutines.launch
 
 object CalendarDestinations {
-
+    const val HOME_ROUTE = "home"
+    const val CALENDER_ROUTE = "calendar"
+    const val SETTING_ROUTE = "setting"
 }
 
 @Composable
@@ -33,9 +35,9 @@ fun rememberCalendarAppState(
 
 @Stable
 class CalendarAppState(
-    val  snackBarHostState: SnackbarHostState,
+    val snackBarHostState: SnackbarHostState,
     val navController: NavHostController,
-    private val resources: Resources,
+    val resources: Resources,
     val coroutineScope: CoroutineScope
 ){
     init {

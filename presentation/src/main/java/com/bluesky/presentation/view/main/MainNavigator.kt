@@ -42,20 +42,6 @@ internal class MainNavigator(
             MainTab.SETTING -> navController.navigateSetting(navOptions)
         }
     }
-
-    fun popBackStack() {
-        navController.popBackStack()
-    }
-
-    fun popBackStackIfNotHome() {
-        if (!isSameCurrentDestination(StandardCalendarRoute.route)) {
-            popBackStack()
-        }
-    }
-
-    private fun isSameCurrentDestination(route: String) =
-        navController.currentDestination?.route == route
-
     @Composable
     fun shouldShowBottomBar(): Boolean {
         val currentRoute = currentDestination?.route ?: return false
