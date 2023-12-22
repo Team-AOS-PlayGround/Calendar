@@ -1,6 +1,7 @@
 package com.bluesky.presentation.view.tab.hitmapcalendar
 
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
@@ -11,10 +12,11 @@ fun NavController.navigateHitMapCalendar(navOptions: NavOptions) {
 }
 
 fun NavGraphBuilder.hitMapCalendarNavGraph(
+    modifier: Modifier,
     paddingValues: PaddingValues
 ) {
     composable(route = HitMapCalendarRoute.route) {
-        HitMapCalendarScreen()
+        HitMapCalendarScreen(modifier)
     }
 }
 

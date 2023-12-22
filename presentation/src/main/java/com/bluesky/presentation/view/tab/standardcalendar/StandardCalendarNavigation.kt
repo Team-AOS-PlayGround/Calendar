@@ -1,6 +1,7 @@
 package com.bluesky.presentation.view.tab.standardcalendar
 
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
@@ -11,10 +12,12 @@ fun NavController.navigateStandardCalendar(navOptions: NavOptions) {
 }
 
 fun NavGraphBuilder.standardCalendarNavGraph(
+    modifier: Modifier,
     paddingValues: PaddingValues
+
 ) {
     composable(route = StandardCalendarRoute.route) {
-        StandardCalendarScreen()
+        StandardCalendarScreen(modifier)
     }
 }
 

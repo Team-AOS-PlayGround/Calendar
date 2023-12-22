@@ -1,6 +1,7 @@
 package com.bluesky.presentation.view.tab.setting
 
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
@@ -11,10 +12,11 @@ fun NavController.navigateSetting(navOptions: NavOptions) {
 }
 
 fun NavGraphBuilder.settingNavGraph(
+    modifier: Modifier,
     paddingValues: PaddingValues
 ) {
     composable(route = SettingRoute.route) {
-        SettingScreen()
+        SettingScreen(modifier)
     }
 }
 

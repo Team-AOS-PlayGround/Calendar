@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
@@ -30,14 +29,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import com.bluesky.presentation.R
-import com.bluesky.presentation.theme.surfaceDim
+import com.bluesky.presentation.theme.Gray300
+import com.bluesky.presentation.theme.Gray800
 import com.bluesky.presentation.view.tab.hitmapcalendar.hitMapCalendarNavGraph
 import com.bluesky.presentation.view.tab.setting.settingNavGraph
 import com.bluesky.presentation.view.tab.standardcalendar.standardCalendarNavGraph
@@ -46,6 +45,7 @@ import java.net.UnknownHostException
 
 @Composable
 internal fun CalendarApp(
+    modifier: Modifier,
     navigator: MainNavigator = rememberMainNavigator(),
 //    onChangeDarkTheme: (Boolean) -> Unit
 ) {
@@ -67,17 +67,15 @@ internal fun CalendarApp(
     Scaffold(
         content = { padding ->
             Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(MaterialTheme.colorScheme.surfaceDim)
+                modifier = modifier
             ) {
                 NavHost(
                     navController = navigator.navController,
                     startDestination = navigator.startDestination,
                 ) {
-                    standardCalendarNavGraph(padding)
-                    hitMapCalendarNavGraph(padding)
-                    settingNavGraph(padding)
+                    standardCalendarNavGraph(modifier, padding)
+                    hitMapCalendarNavGraph(modifier, padding)
+                    settingNavGraph(modifier, padding)
                 }
             }
         },
@@ -111,7 +109,7 @@ private fun MainBottomBar(
                 .fillMaxWidth()
                 .height(56.dp)
                 .background(
-                    color = MaterialTheme.colorScheme.surface,
+                    color = Gray800,
                     shape = RoundedCornerShape(15.dp, 15.dp, 0.dp, 0.dp)
                 )
                 .padding(horizontal = 28.dp),
@@ -151,7 +149,7 @@ private fun RowScope.MainBottomBarItem(
             painter = painterResource(tab.iconResId),
             contentDescription = tab.contentDescription,
             tint = if (selected) {
-                Color.Blue
+                Gray300
             } else {
                 MaterialTheme.colorScheme.outline
             },
