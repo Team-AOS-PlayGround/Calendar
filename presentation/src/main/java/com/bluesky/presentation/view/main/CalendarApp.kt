@@ -6,7 +6,6 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideIn
 import androidx.compose.animation.slideOut
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -19,7 +18,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
@@ -110,17 +108,11 @@ private fun MainBottomBar(
         Row(
             modifier = Modifier
                 .navigationBarsPadding()
-                .padding(start = 8.dp, end = 8.dp, bottom = 28.dp)
                 .fillMaxWidth()
                 .height(56.dp)
-                .border(
-                    width = 1.dp,
-                    color = MaterialTheme.colorScheme.outline,
-                    shape = RoundedCornerShape(size = 28.dp)
-                )
                 .background(
                     color = MaterialTheme.colorScheme.surface,
-                    shape = RoundedCornerShape(28.dp)
+                    shape = RoundedCornerShape(15.dp, 15.dp, 0.dp, 0.dp)
                 )
                 .padding(horizontal = 28.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
