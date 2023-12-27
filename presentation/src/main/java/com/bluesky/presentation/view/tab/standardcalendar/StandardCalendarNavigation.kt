@@ -17,7 +17,7 @@ fun NavGraphBuilder.standardCalendarNavGraph(
 
 ) {
     composable(route = StandardCalendarRoute.route) {
-        StandardCalendarScreen(modifier)
+        HorizontalCalendarScreen(modifier)
     }
 }
 

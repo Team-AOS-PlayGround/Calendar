@@ -46,3 +46,8 @@ val Gray600 = Color(0xFF868E96)
 val Gray700 = Color(0xFF495057)
 val Gray800 = Color(0xFF343A40)
 val Gray900 = Color(0xFF212529)
+
+// pastel
+val Pastel1 = Color(0xFFD4F0F0)
+val Pastel2 = Color(0xFF8FCACA)
+val Pastel3 = Color(0xFFCCE2CB)

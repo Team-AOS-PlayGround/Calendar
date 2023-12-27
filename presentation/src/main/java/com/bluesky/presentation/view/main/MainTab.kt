@@ -12,7 +12,7 @@ internal enum class MainTab(
     val route: String,
 ) {
     STANDARD_CALENDAR(
-        iconResId = R.drawable.ic_standard_calendar,
+        iconResId = R.drawable.ic_horizontal_calendar,
         contentDescription = "홈",
         StandardCalendarRoute.route,
     ),
