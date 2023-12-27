@@ -8,9 +8,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navOptions
-import com.bluesky.presentation.view.tab.hitmapcalendar.navigateHitMapCalendar
+import com.bluesky.presentation.view.tab.stickycalendar.navigateStickyCalendar
 import com.bluesky.presentation.view.tab.setting.navigateSetting
-import com.bluesky.presentation.view.tab.standardcalendar.StandardCalendarRoute
 import com.bluesky.presentation.view.tab.standardcalendar.navigateStandardCalendar
 
 internal class MainNavigator(
@@ -38,7 +37,7 @@ internal class MainNavigator(
 
         when (tab) {
             MainTab.STANDARD_CALENDAR -> navController.navigateStandardCalendar(navOptions)
-            MainTab.HIT_MAP_CALENDAR -> navController.navigateHitMapCalendar(navOptions)
+            MainTab.HIT_MAP_CALENDAR -> navController.navigateStickyCalendar(navOptions)
             MainTab.SETTING -> navController.navigateSetting(navOptions)
         }
     }

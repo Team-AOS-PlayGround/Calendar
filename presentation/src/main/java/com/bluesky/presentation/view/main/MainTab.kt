@@ -1,7 +1,7 @@
 package com.bluesky.presentation.view.main
 
 import com.bluesky.presentation.R
-import com.bluesky.presentation.view.tab.hitmapcalendar.HitMapCalendarRoute
+import com.bluesky.presentation.view.tab.stickycalendar.StickyCalendarRoute
 import com.bluesky.presentation.view.tab.setting.SettingRoute
 import com.bluesky.presentation.view.tab.standardcalendar.StandardCalendarRoute
 
@@ -13,13 +13,13 @@ internal enum class MainTab(
 ) {
     STANDARD_CALENDAR(
         iconResId = R.drawable.ic_horizontal_calendar,
-        contentDescription = "홈",
+        contentDescription = "캘린더 1",
         StandardCalendarRoute.route,
     ),
     HIT_MAP_CALENDAR(
-        iconResId = R.drawable.ic_heat_map_caledar,
-        contentDescription = "북마크",
-        HitMapCalendarRoute.route,
+        iconResId = R.drawable.ic_sticky_calendar,
+        contentDescription = "캘린더 2",
+        StickyCalendarRoute.route,
     ),
     SETTING(
         iconResId = R.drawable.ic_setting,

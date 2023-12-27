@@ -2,4 +2,6 @@
     <string name="app_name">Calendar</string>
     <string name="error_message_network">네트워크 에러</string>
     <string name="error_message_unknown">알 수 없는 에러</string>
+    <string name="sticky_calendar_seleted_nights">박을 선택하셨습니다.</string>
+    <string name="sticky_calendar_select_nights">날짜를 선택해주세요.</string>
 </resources>

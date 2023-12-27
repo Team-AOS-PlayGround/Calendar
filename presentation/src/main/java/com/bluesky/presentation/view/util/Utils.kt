@@ -64,19 +64,6 @@ fun Modifier.clickable(
 }
 
 @Composable
-fun StatusBarColorUpdateEffect(color: Color) {
-    if (LocalInspectionMode.current) return // findActivity() will not work in preview.
-    val activity = LocalContext.current.findActivity()
-    val lifecycleOwner = LocalLifecycleOwner.current
-    val observer = remember {
-        StatusBarColorLifecycleObserver(activity, color.toArgb())
-    }
-    LaunchedEffect(lifecycleOwner) {
-        lifecycleOwner.lifecycle.addObserver(observer)
-    }
-}
-
-@Composable
 fun NavigationIcon(onBackClick: () -> Unit) {
     Box(
         modifier = Modifier

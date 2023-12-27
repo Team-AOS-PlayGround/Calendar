@@ -37,9 +37,9 @@ import androidx.navigation.compose.NavHost
 import com.bluesky.presentation.R
 import com.bluesky.presentation.theme.Gray300
 import com.bluesky.presentation.theme.Gray800
-import com.bluesky.presentation.view.tab.hitmapcalendar.hitMapCalendarNavGraph
 import com.bluesky.presentation.view.tab.setting.settingNavGraph
 import com.bluesky.presentation.view.tab.standardcalendar.standardCalendarNavGraph
+import com.bluesky.presentation.view.tab.stickycalendar.stickyCalendarNavGraph
 import kotlinx.coroutines.launch
 import java.net.UnknownHostException
 
@@ -74,7 +74,7 @@ internal fun CalendarApp(
                     startDestination = navigator.startDestination,
                 ) {
                     standardCalendarNavGraph(modifier, padding)
-                    hitMapCalendarNavGraph(modifier, padding)
+                    stickyCalendarNavGraph(modifier, padding)
                     settingNavGraph(modifier, padding)
                 }
             }
