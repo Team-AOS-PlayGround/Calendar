@@ -4,8 +4,11 @@ import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
+import com.bluesky.data.datasource.CalendarDataSource
 import com.bluesky.data.datasource.SettingDataSource
+import com.bluesky.data.repository.setting.CalendarDataSourceImpl
 import com.bluesky.data.repository.setting.SettingDataSourceImpl
+import com.bluesky.domain.repository.setting.CalendarRepository
 import com.bluesky.domain.repository.setting.SettingRepository
 import dagger.Module
 import dagger.Provides
@@ -19,9 +22,9 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object DataModule {
     private const val SETTING_DATASTORE_NAME = "SETTINGS_PREFERENCES"
-    private const val SESSION_DATASTORE_NAME = "SESSION_PREFERENCES"
+    private const val CALENDAR_DATASTORE_NAME = "CALENDAR_PREFERENCES"
     private val Context.settingDataStore by preferencesDataStore(SETTING_DATASTORE_NAME)
-    private val Context.sessionDataStore by preferencesDataStore(SESSION_DATASTORE_NAME)
+    private val Context.calendarDataStore by preferencesDataStore(CALENDAR_DATASTORE_NAME)
 
     @Provides
     @Singleton
@@ -32,10 +35,10 @@ object DataModule {
 
     @Provides
     @Singleton
-    @Named("session")
-    fun provideSessionDataStore(
+    @Named("calendar")
+    fun provideCalendarDataStore(
         @ApplicationContext context: Context
-    ): DataStore<Preferences> = context.sessionDataStore
+    ): DataStore<Preferences> = context.calendarDataStore
 
     @Provides
     @Singleton
@@ -43,5 +46,13 @@ object DataModule {
         settingDataSource: SettingDataSource
     ) : SettingRepository {
         return SettingDataSourceImpl(settingDataSource)
+    }
+
+    @Provides
+    @Singleton
+    fun provideCalendarRepository(
+        calendarDataSource: CalendarDataSource
+    ) : CalendarRepository {
+        return CalendarDataSourceImpl(calendarDataSource)
     }
 }
