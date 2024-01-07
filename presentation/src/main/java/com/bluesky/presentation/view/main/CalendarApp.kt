@@ -108,10 +108,7 @@ private fun MainBottomBar(
                 .navigationBarsPadding()
                 .fillMaxWidth()
                 .height(56.dp)
-                .background(
-                    color = Gray800,
-                    shape = RoundedCornerShape(15.dp, 15.dp, 0.dp, 0.dp)
-                )
+                .background(color = Gray800)
                 .padding(horizontal = 28.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
         ) {
