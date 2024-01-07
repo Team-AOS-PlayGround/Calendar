@@ -45,7 +45,7 @@ import java.time.DayOfWeek
 import java.time.YearMonth
 
 @Composable
-fun HorizontalCalendarScreen(
+fun StandardCalendarScreen(
     modifier: Modifier,
     adjacentMonths: Long = 500
 ) {
@@ -113,7 +113,7 @@ private fun Day(day: CalendarDay) {
 @Preview(showBackground = true, widthDp = 400, heightDp = 800)
 fun StandardCalendarPreview() {
     CalendarTheme {
-        HorizontalCalendarScreen(modifier = Modifier
+        StandardCalendarScreen(modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.surfaceDim))
     }
