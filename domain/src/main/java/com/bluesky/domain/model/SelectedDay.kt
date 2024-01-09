@@ -1,4 +1,4 @@
-package com.bluesky.data.model
+package com.bluesky.domain.model
 
 import com.kizitonwose.calendar.core.CalendarDay
 

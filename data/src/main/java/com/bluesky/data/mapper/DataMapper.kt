@@ -1,6 +1,6 @@
 package com.bluesky.data.mapper
 
-import com.bluesky.data.model.SelectedDay
+import com.bluesky.domain.model.SelectedDay
 import com.kizitonwose.calendar.core.CalendarDay
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json

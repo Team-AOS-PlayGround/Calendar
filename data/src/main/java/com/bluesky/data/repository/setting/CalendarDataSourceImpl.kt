@@ -1,11 +1,10 @@
 package com.bluesky.data.repository.setting
 
 import com.bluesky.data.datasource.CalendarDataSource
-import com.bluesky.data.model.SelectedDay
+import com.bluesky.domain.model.SelectedDay
 import com.bluesky.domain.repository.setting.CalendarRepository
 import com.kizitonwose.calendar.core.CalendarDay
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 class CalendarDataSourceImpl @Inject constructor(
