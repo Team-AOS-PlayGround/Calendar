@@ -84,6 +84,7 @@ fun StandardCalendarScreen(
             state = state,
             dayContent = { day ->
                 Day(day, isSelected = selections.contains(day)) { clicked ->
+                    //TODO When Click Event Make To Do List Something
                     if (selections.contains(clicked)) {
                         selections.remove(clicked)
                     } else {
@@ -106,16 +107,6 @@ private fun Day(day: CalendarDay) {
         contentAlignment = Alignment.Center
     ) {
         Text(text = day.date.dayOfMonth.toString())
-    }
-}
-
-@Composable
-@Preview(showBackground = true, widthDp = 400, heightDp = 800)
-fun StandardCalendarPreview() {
-    CalendarTheme {
-        StandardCalendarScreen(modifier = Modifier
-            .fillMaxSize()
-            .background(MaterialTheme.colorScheme.surfaceDim))
     }
 }
 
@@ -165,5 +156,16 @@ private fun Day(day: CalendarDay, isSelected: Boolean, onClick: (CalendarDay) ->
             color = textColor,
             fontSize = 14.sp,
         )
+    }
+}
+
+
+@Composable
+@Preview(showBackground = true, widthDp = 400, heightDp = 800)
+fun StandardCalendarPreview() {
+    CalendarTheme {
+        StandardCalendarScreen(modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.surfaceDim))
     }
 }
