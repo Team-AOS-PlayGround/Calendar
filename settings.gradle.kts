@@ -23,3 +23,4 @@ include(
     ":presentation"
 )
 
+include(":composecalendar")
