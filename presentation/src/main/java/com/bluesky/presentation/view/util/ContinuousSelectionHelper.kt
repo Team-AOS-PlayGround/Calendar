@@ -1,9 +1,10 @@
 package com.bluesky.presentation.view.util
 
-import com.kizitonwose.calendar.core.atStartOfMonth
-import com.kizitonwose.calendar.core.nextMonth
-import com.kizitonwose.calendar.core.previousMonth
-import com.kizitonwose.calendar.core.yearMonth
+
+import com.bluesky.composecalendar.core.atStartOfMonth
+import com.bluesky.composecalendar.core.nextMonth
+import com.bluesky.composecalendar.core.previousMonth
+import com.bluesky.composecalendar.core.yearMonth
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit

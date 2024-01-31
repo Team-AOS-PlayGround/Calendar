@@ -1,9 +1,9 @@
 package com.bluesky.data.repository.setting
 
+import com.bluesky.composecalendar.core.CalendarDay
 import com.bluesky.data.datasource.CalendarDataSource
 import com.bluesky.domain.model.SelectedDay
 import com.bluesky.domain.repository.setting.CalendarRepository
-import com.kizitonwose.calendar.core.CalendarDay
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

@@ -4,10 +4,10 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringSetPreferencesKey
+import com.bluesky.composecalendar.core.CalendarDay
 import com.bluesky.data.mapper.deserialize
 import com.bluesky.data.mapper.serialize
 import com.bluesky.domain.model.SelectedDay
-import com.kizitonwose.calendar.core.CalendarDay
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Named

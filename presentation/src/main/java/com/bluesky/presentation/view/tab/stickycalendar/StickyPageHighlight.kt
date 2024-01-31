@@ -13,18 +13,18 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
+import com.bluesky.composecalendar.core.CalendarDay
+import com.bluesky.composecalendar.core.DayPosition
 import com.bluesky.presentation.theme.Gray300
 import com.bluesky.presentation.theme.Gray900
 import com.bluesky.presentation.theme.Orange200
 import com.bluesky.presentation.view.util.ContinuousSelectionHelper.isInDateBetweenSelection
 import com.bluesky.presentation.view.util.ContinuousSelectionHelper.isOutDateBetweenSelection
 import com.bluesky.presentation.view.util.DateSelection
-import com.kizitonwose.calendar.core.CalendarDay
-import com.kizitonwose.calendar.core.DayPosition
+
 import java.time.LocalDate
 
 private class HalfSizeShape(private val clipStart: Boolean) : Shape {

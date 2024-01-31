@@ -7,5 +7,6 @@ android {
 }
 
 dependencies {
-    implementation(libs.calendar.compose)
+//    implementation(libs.calendar.compose)
+    implementation(projects.composecalendar)
 }

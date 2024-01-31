@@ -5,7 +5,7 @@ androidxCore = "1.9.0"
 androidxAppCompat = "1.6.1"
 androidxLifecycle = "2.6.1"
 androidxComposeBom = "2023.05.01"
-androidxComposeCompiler = "1.4.7"
+androidxComposeCompiler = "1.5.3"
 androidxComposeNavigation = "2.6.0"
 androidxComposeMaterial3 = "1.1.0"
 androidxActivity = "1.7.2"
@@ -25,8 +25,7 @@ composeShimmer = "1.0.5"
 
 junit4 = "4.13.2"
 junitVintageEngine = "5.10.0"
-kotlin = "1.8.21"
-
+kotlin = "1.9.10" #1.8.21"
 androidxTestExt = "1.1.4"
 androidxEspresso = "3.5.0"
 kotest = "5.6.2"
@@ -71,6 +70,7 @@ androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "u
 androidx-compose-ui-testManifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxComposeNavigation" }
 androidx-compose-navigation-test = { group = "androidx.navigation", name = "navigation-testing", version.ref = "androidxComposeNavigation" }
+
 
 hilt-core = { group = "com.google.dagger", name = "hilt-core", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
@@ -128,6 +128,8 @@ material = { group = "com.google.android.material", name = "material", version.r
 
 # calendar
 calendar-compose = { group = "com.kizitonwose.calendar", name = "compose", version.ref = "calendarCompose" }
+androidx-foundation-layout-android = { group = "androidx.compose.foundation", name = "foundation-layout-android", version = "1.6.0" }
+androidx-foundation-android = { group = "androidx.compose.foundation", name = "foundation-android", version = "1.6.0" }
 
 [bundles]
 

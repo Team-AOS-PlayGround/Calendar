@@ -1,7 +1,7 @@
 package com.bluesky.domain.repository.setting
 
+import com.bluesky.composecalendar.core.CalendarDay
 import com.bluesky.domain.model.SelectedDay
-import com.kizitonwose.calendar.core.CalendarDay
 import kotlinx.coroutines.flow.Flow
 
 interface CalendarRepository {

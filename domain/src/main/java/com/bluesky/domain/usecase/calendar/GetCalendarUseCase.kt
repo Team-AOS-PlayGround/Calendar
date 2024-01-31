@@ -1,8 +1,8 @@
 package com.bluesky.domain.usecase.calendar
 
+import com.bluesky.composecalendar.core.CalendarDay
 import com.bluesky.domain.model.SelectedDay
 import com.bluesky.domain.repository.setting.CalendarRepository
-import com.kizitonwose.calendar.core.CalendarDay
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

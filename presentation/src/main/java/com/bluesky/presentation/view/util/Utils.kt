@@ -1,9 +1,9 @@
 package com.bluesky.presentation.view.util
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.ContextWrapper
-import androidx.annotation.ColorRes
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -32,12 +32,12 @@ import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
-import com.kizitonwose.calendar.compose.CalendarLayoutInfo
-import com.kizitonwose.calendar.compose.CalendarState
-import com.kizitonwose.calendar.compose.weekcalendar.WeekCalendarState
-import com.kizitonwose.calendar.core.CalendarMonth
-import com.kizitonwose.calendar.core.Week
-import com.kizitonwose.calendar.core.yearMonth
+import com.bluesky.composecalendar.compose.CalendarLayoutInfo
+import com.bluesky.composecalendar.compose.CalendarState
+import com.bluesky.composecalendar.compose.weekcalendar.WeekCalendarState
+import com.bluesky.composecalendar.core.CalendarMonth
+import com.bluesky.composecalendar.core.Week
+import com.bluesky.composecalendar.core.yearMonth
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.filterNotNull
 import java.time.DayOfWeek
@@ -226,5 +226,6 @@ fun getWeekPageTitle(week: Week): String {
     }
 }
 
+@SuppressLint("ResourceType")
 internal fun Context.getColorCompat(color: Color) =
     ContextCompat.getColor(this, color.toArgb())
